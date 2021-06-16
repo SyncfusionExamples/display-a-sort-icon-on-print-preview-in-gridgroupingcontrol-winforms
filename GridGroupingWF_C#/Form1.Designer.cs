@@ -16,6 +16,8 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                //Disposing event
+                this.gridGroupingControl1.TableControlCellDrawn -= GridGroupingControl1_TableControlCellDrawn;
             }
             base.Dispose(disposing);
         }

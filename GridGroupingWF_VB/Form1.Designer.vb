@@ -14,6 +14,8 @@ Namespace DataGrid
 		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 			If disposing AndAlso (components IsNot Nothing) Then
 				components.Dispose()
+				'Disposing event
+				RemoveHandler Me.gridGroupingControl1.TableControlCellDrawn, AddressOf GridGroupingControl1_TableControlCellDrawn
 			End If
 			MyBase.Dispose(disposing)
 		End Sub
